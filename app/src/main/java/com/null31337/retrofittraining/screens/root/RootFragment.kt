@@ -14,9 +14,9 @@ import com.google.android.material.tabs.TabLayoutMediator
 import com.null31337.retrofittraining.R
 import com.null31337.retrofittraining.ViewPagerAdapter
 
-class RootFragment: Fragment(){
+class RootFragment : Fragment() {
 
-    private var ctx : Context? = null
+    private var ctx: Context? = null
 
     override fun onAttach(context: Context) {
         super.onAttach(context)
@@ -30,13 +30,20 @@ class RootFragment: Fragment(){
     ): View? {
         val view = inflater.inflate(R.layout.fragment_root, container, false)
         view.findViewById<TabLayout>(R.id.tabLayout).tabIconTint = null
-        view.findViewById<ViewPager2>(R.id.view_pager_root).adapter = ViewPagerAdapter(ctx as FragmentActivity)
-        TabLayoutMediator(view.findViewById(R.id.tabLayout), view.findViewById(R.id.view_pager_root)) {
-            tab, pos -> when(pos) {
+        view.findViewById<ViewPager2>(R.id.view_pager_root).adapter =
+            ViewPagerAdapter(ctx as FragmentActivity)
+        TabLayoutMediator(
+            view.findViewById(R.id.tabLayout),
+            view.findViewById(R.id.view_pager_root)
+        ) { tab, pos ->
+            when (pos) {
                 0 -> {
                     tab.setIcon(R.drawable.ic_baseline_attach_money_24)
                 }
                 1 -> {
+                    tab.setIcon(R.drawable.matrix)
+                }
+                2 -> {
                     tab.setIcon(R.drawable.cat)
                 }
             }

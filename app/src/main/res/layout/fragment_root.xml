@@ -10,7 +10,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintBottom_toBottomOf="@+id/tabLayout"/>
+        app:layout_constraintBottom_toTopOf="@+id/tabLayout"/>
     <com.google.android.material.tabs.TabLayout
         android:id="@+id/tabLayout"
         app:layout_constraintStart_toStartOf="parent"
