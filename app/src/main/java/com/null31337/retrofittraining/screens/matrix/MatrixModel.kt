@@ -12,7 +12,7 @@ class MatrixModel(private val maxX: Int, private val maxY: Int) {
             Random.nextInt(-30..0).toLong()
         )
     }
-    private val updateEvery = 50000000L
+    private val updateEvery = 100000000L
 
     fun update(timeElapsed: Long) {
         for (i in list) {

@@ -20,25 +20,24 @@ class MatrixRender {
             for (j in 0..9) {
                 canvas.drawBitmap(
                     bitmap,
-                    getRect(i, j),
+                    getRect(i, j, bitmap),
                     Rect(
                         cubeSize * i.x,
                         (cubeSize * (i.y - j)).toInt(),
                         cubeSize * (i.x + 1),
                         (cubeSize * (i.y + 1 - j)).toInt()
-                    ), paint
+                    ),paint
                 )
             }
         }
     }
 
-    private fun getRect(point: Point, i: Int): Rect {
-        val x: Int = (i % 4) * 512
-        val y: Int = (i / 4) * 512
-        val xx: Int = (point.list[i] % 8) * 64
-        val yy: Int = (point.list[i] / 8) * 64
-        //Log.d("TAG", "getRect: ${x + xx} + ${y + yy} + ${x + xx + 64} + ${y + yy + 64}")
-        return Rect(x + xx, y + yy, x + xx + 64, y + yy + 64)
+    private fun getRect(point: Point, i: Int, bitmap: Bitmap): Rect {
+        val x: Int = (i / 4) * (bitmap.height / 4)
+        val y: Int = (i % 4) * (bitmap.width / 4)
+        val xx: Int = (point.list[i] / 8) * (bitmap.height / 32)
+        val yy: Int = (point.list[i] % 8) * (bitmap.width / 32)
+        return Rect(x + xx, y + yy, x + xx + (bitmap.height / 32), y + yy + (bitmap.width / 32))
     }
 
 }

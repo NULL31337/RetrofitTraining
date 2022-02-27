@@ -13,15 +13,15 @@ import kotlinx.coroutines.*
 class MatrixEngine(context: Context, attrs: AttributeSet?, defStyleAttr: Int) :
     SurfaceView(context, attrs, defStyleAttr), SurfaceHolder.Callback {
     private var model: MatrixModel? = null
-    private var bitmap : Bitmap
+    private var bitmap: Bitmap
     private var render: MatrixRender = MatrixRender()
     private var drawingJob: Job? = null
 
     var time = System.nanoTime()
 
 
-    constructor(context: Context): this(context, null, 0)
-    constructor(context: Context, attrs: AttributeSet): this(context, attrs, 0)
+    constructor(context: Context) : this(context, null, 0)
+    constructor(context: Context, attrs: AttributeSet) : this(context, attrs, 0)
 
     init {
         holder.addCallback(this)
