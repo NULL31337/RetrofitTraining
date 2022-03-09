@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/rootFragment">
+
+    <fragment
+        android:id="@+id/noteShowFragment"
+        android:name="com.null31337.retrofittraining.screens.note.show.NoteShowFragment"
+        android:label="NoteShowFragment" >
+        <action
+            android:id="@+id/action_noteShowFragment_to_rootFragment"
+            app:destination="@id/rootFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/noteAddFragment"
+        android:name="com.null31337.retrofittraining.screens.note.add.NoteAddFragment"
+        android:label="NoteAddFragment" >
+        <action
+            android:id="@+id/action_noteAddFragment_to_rootFragment"
+            app:destination="@id/rootFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/rootFragment"
+        android:name="com.null31337.retrofittraining.screens.root.RootFragment"
+        android:label="RootFragment" >
+        <action
+            android:id="@+id/action_rootFragment_to_noteAddFragment"
+            app:destination="@id/noteAddFragment" />
+        <action
+            android:id="@+id/action_rootFragment_to_noteShowFragment"
+            app:destination="@id/noteShowFragment" />
+    </fragment>
+</navigation>

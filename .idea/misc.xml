@@ -4,11 +4,15 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/RetrofitTraining/app/src/main/res/layout/activity_main.xml" value="0.152" />
+        <entry key="..\:/RetrofitTraining/app/src/main/res/layout/fragment_add_note.xml" value="0.11354166666666667" />
         <entry key="..\:/RetrofitTraining/app/src/main/res/layout/fragment_cat.xml" value="0.11302083333333333" />
+        <entry key="..\:/RetrofitTraining/app/src/main/res/layout/fragment_list_note.xml" value="0.152" />
         <entry key="..\:/RetrofitTraining/app/src/main/res/layout/fragment_matrix.xml" value="0.11354166666666667" />
         <entry key="..\:/RetrofitTraining/app/src/main/res/layout/fragment_money.xml" value="0.2" />
-        <entry key="..\:/RetrofitTraining/app/src/main/res/layout/fragment_root.xml" value="0.11302083333333333" />
+        <entry key="..\:/RetrofitTraining/app/src/main/res/layout/fragment_root.xml" value="0.1" />
+        <entry key="..\:/RetrofitTraining/app/src/main/res/layout/fragment_show_note.xml" value="0.2" />
         <entry key="..\:/RetrofitTraining/app/src/main/res/layout/layout_money.xml" value="0.4195624195624196" />
+        <entry key="..\:/RetrofitTraining/app/src/main/res/layout/layout_note.xml" value="0.16911764705882354" />
       </map>
     </option>
   </component>

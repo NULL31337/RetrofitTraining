@@ -5,7 +5,6 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentActivity
 import androidx.viewpager2.widget.ViewPager2
@@ -17,6 +16,7 @@ import com.null31337.retrofittraining.ViewPagerAdapter
 class RootFragment : Fragment() {
 
     private var ctx: Context? = null
+    private var position: Int = 0
 
     override fun onAttach(context: Context) {
         super.onAttach(context)
@@ -36,6 +36,7 @@ class RootFragment : Fragment() {
             view.findViewById(R.id.tabLayout),
             view.findViewById(R.id.view_pager_root)
         ) { tab, pos ->
+            position = pos
             when (pos) {
                 0 -> {
                     tab.setIcon(R.drawable.ic_baseline_attach_money_24)
@@ -44,10 +45,18 @@ class RootFragment : Fragment() {
                     tab.setIcon(R.drawable.matrix)
                 }
                 2 -> {
+                    tab.setIcon(R.drawable.ic_baseline_sticky_note_2_24)
+                }
+                3 -> {
                     tab.setIcon(R.drawable.cat)
                 }
             }
         }.attach()
         return view
     }
+//
+//    override fun onSaveInstanceState(outState: Bundle) {
+//        super.onSaveInstanceState(outState)
+//        outState.putInt("position", position)
+//    }
 }

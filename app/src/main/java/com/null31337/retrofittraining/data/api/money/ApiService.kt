@@ -1,4 +1,4 @@
-package com.null31337.retrofittraining.data.api
+package com.null31337.retrofittraining.data.api.money
 
 import com.null31337.retrofittraining.model.money.Money
 import retrofit2.Response

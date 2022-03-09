@@ -1,4 +1,4 @@
-package com.null31337.retrofittraining.data.api
+package com.null31337.retrofittraining.data.api.money
 
 import com.jakewharton.retrofit2.converter.kotlinx.serialization.asConverterFactory
 import kotlinx.serialization.ExperimentalSerializationApi
