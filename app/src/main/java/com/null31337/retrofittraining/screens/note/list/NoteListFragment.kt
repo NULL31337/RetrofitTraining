@@ -7,8 +7,6 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
-import androidx.navigation.Navigation
-import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.RecyclerView
 import com.null31337.retrofittraining.APP
 import com.null31337.retrofittraining.R
@@ -55,6 +53,4 @@ class NoteListFragment : Fragment() {
             APP.navController.navigate(R.id.action_rootFragment_to_noteShowFragment, bundle)
         }
     }
-
-
 }

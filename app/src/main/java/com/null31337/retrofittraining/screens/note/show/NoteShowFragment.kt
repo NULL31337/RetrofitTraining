@@ -37,10 +37,10 @@ class NoteShowFragment : Fragment() {
         viewModel = ViewModelProvider(this)[NoteShowViewModel::class.java]
         binding.btnDeleteNote.setOnClickListener {
             viewModel.delete(currentNode) {}
-            APP.navController.navigate(R.id.action_noteShowFragment_to_rootFragment)
+            APP.navController.navigateUp()
         }
         binding.btnBack.setOnClickListener {
-            APP.navController.navigate(R.id.action_noteShowFragment_to_rootFragment)
+            APP.navController.navigateUp()
         }
     }
 }

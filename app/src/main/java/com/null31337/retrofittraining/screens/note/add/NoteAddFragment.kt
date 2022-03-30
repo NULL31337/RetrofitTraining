@@ -34,10 +34,10 @@ class NoteAddFragment : Fragment() {
             val title = binding.noteTitle.text.toString()
             val text = binding.noteText.text.toString()
             viewModel.insert(NoteModel(title = title, text = text)) {}
-            APP.navController.navigate(R.id.action_noteAddFragment_to_rootFragment)
+            APP.navController.navigateUp()
         }
         binding.btnBack.setOnClickListener {
-            APP.navController.navigate(R.id.action_noteAddFragment_to_rootFragment)
+            APP.navController.navigateUp()
         }
     }
 

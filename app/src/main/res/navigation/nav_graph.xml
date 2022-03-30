@@ -7,19 +7,11 @@
     <fragment
         android:id="@+id/noteShowFragment"
         android:name="com.null31337.retrofittraining.screens.note.show.NoteShowFragment"
-        android:label="NoteShowFragment" >
-        <action
-            android:id="@+id/action_noteShowFragment_to_rootFragment"
-            app:destination="@id/rootFragment" />
-    </fragment>
+        android:label="NoteShowFragment" />
     <fragment
         android:id="@+id/noteAddFragment"
         android:name="com.null31337.retrofittraining.screens.note.add.NoteAddFragment"
-        android:label="NoteAddFragment" >
-        <action
-            android:id="@+id/action_noteAddFragment_to_rootFragment"
-            app:destination="@id/rootFragment" />
-    </fragment>
+        android:label="NoteAddFragment" />
     <fragment
         android:id="@+id/rootFragment"
         android:name="com.null31337.retrofittraining.screens.root.RootFragment"
@@ -30,5 +22,76 @@
         <action
             android:id="@+id/action_rootFragment_to_noteShowFragment"
             app:destination="@id/noteShowFragment" />
+        <action
+            android:id="@+id/action_rootFragment_to_tutorialFragment"
+            app:destination="@id/tutorialFragment" />
+        <action
+            android:id="@+id/action_rootFragment_to_functionsFragment"
+            app:destination="@id/functionsFragment" />
     </fragment>
+    <fragment
+        android:id="@+id/tutorialFragment"
+        android:name="com.null31337.retrofittraining.screens.json_server.tutorial.TutorialFragment"
+        android:label="TutorialFragment" />
+    <fragment
+        android:id="@+id/functionsFragment"
+        android:name="com.null31337.retrofittraining.screens.json_server.functions.FunctionsFragment"
+        android:label="FunctionsFragment" >
+        <action
+            android:id="@+id/action_functionsFragment_to_showPostsFragment"
+            app:destination="@id/showPostsFragment" />
+        <action
+            android:id="@+id/action_functionsFragment_to_showAllPostsFragment"
+            app:destination="@id/showAllPostsFragment" />
+        <action
+            android:id="@+id/action_functionsFragment_to_deletePostFragment"
+            app:destination="@id/deletePostFragment" />
+        <action
+            android:id="@+id/action_functionsFragment_to_createPostsFragment"
+            app:destination="@id/createPostsFragment" />
+        <action
+            android:id="@+id/action_functionsFragment_to_createPostUserIdRangeFragment"
+            app:destination="@id/createPostUserIdRangeFragment" />
+        <action
+            android:id="@+id/action_functionsFragment_to_createPostWithRangeTextFragment"
+            app:destination="@id/createPostWithRangeTextFragment" />
+        <action
+            android:id="@+id/action_functionsFragment_to_createPostWithDoubleRange"
+            app:destination="@id/createPostWithDoubleRange" />
+        <action
+            android:id="@+id/action_functionsFragment_to_createPostRandomFragment"
+            app:destination="@id/createPostRandomFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/showPostsFragment"
+        android:name="com.null31337.retrofittraining.screens.json_server.functions.funtion_fragments.show_posts.ShowPostsFragment"
+        android:label="ShowPostsFragment" />
+    <fragment
+        android:id="@+id/showAllPostsFragment"
+        android:name="com.null31337.retrofittraining.screens.json_server.functions.funtion_fragments.show_posts.ShowAllPostsFragment"
+        android:label="ShowAllPostsFragment" />
+    <fragment
+        android:id="@+id/deletePostFragment"
+        android:name="com.null31337.retrofittraining.screens.json_server.functions.funtion_fragments.delete_posts.DeletePostFragment"
+        android:label="DeletePostFragment" />
+    <fragment
+        android:id="@+id/createPostsFragment"
+        android:name="com.null31337.retrofittraining.screens.json_server.functions.funtion_fragments.create_posts.CreatePostsFragment"
+        android:label="CreatePostsFragment" />
+    <fragment
+        android:id="@+id/createPostUserIdRangeFragment"
+        android:name="com.null31337.retrofittraining.screens.json_server.functions.funtion_fragments.create_posts.CreatePostUserIdRangeFragment"
+        android:label="CreatePostUserIdRangeFragment" />
+    <fragment
+        android:id="@+id/createPostWithDoubleRange"
+        android:name="com.null31337.retrofittraining.screens.json_server.functions.funtion_fragments.create_posts.CreatePostWithDoubleRange"
+        android:label="CreatePostWithDoubleRange" />
+    <fragment
+        android:id="@+id/createPostWithRangeTextFragment"
+        android:name="com.null31337.retrofittraining.screens.json_server.functions.funtion_fragments.create_posts.CreatePostWithRangeTextFragment"
+        android:label="CreatePostWithRangeTextFragment" />
+    <fragment
+        android:id="@+id/createPostRandomFragment"
+        android:name="com.null31337.retrofittraining.screens.json_server.functions.funtion_fragments.create_posts.CreatePostRandomFragment"
+        android:label="CreatePostRandomFragment" />
 </navigation>

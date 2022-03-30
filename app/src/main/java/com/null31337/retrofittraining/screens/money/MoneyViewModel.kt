@@ -14,7 +14,11 @@ class MoneyViewModel : ViewModel() {
 
     fun getMoney() {
         viewModelScope.launch {
-            moneyList.value = rep.getMoney()
+            var tmp = rep.getMoney()
+            while (!tmp.isSuccessful) {
+                tmp = rep.getMoney()
+            }
+            moneyList.value = tmp
         }
     }
 }

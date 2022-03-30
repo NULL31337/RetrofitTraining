@@ -11,7 +11,6 @@ import androidx.viewpager2.widget.ViewPager2
 import com.google.android.material.tabs.TabLayout
 import com.google.android.material.tabs.TabLayoutMediator
 import com.null31337.retrofittraining.R
-import com.null31337.retrofittraining.ViewPagerAdapter
 
 class RootFragment : Fragment() {
 
@@ -30,8 +29,7 @@ class RootFragment : Fragment() {
     ): View? {
         val view = inflater.inflate(R.layout.fragment_root, container, false)
         view.findViewById<TabLayout>(R.id.tabLayout).tabIconTint = null
-        view.findViewById<ViewPager2>(R.id.view_pager_root).adapter =
-            ViewPagerAdapter(ctx as FragmentActivity)
+        view.findViewById<ViewPager2>(R.id.view_pager_root).adapter = ViewPagerAdapter(ctx as FragmentActivity)
         TabLayoutMediator(
             view.findViewById(R.id.tabLayout),
             view.findViewById(R.id.view_pager_root)
@@ -50,13 +48,11 @@ class RootFragment : Fragment() {
                 3 -> {
                     tab.setIcon(R.drawable.cat)
                 }
+                4 -> {
+                    tab.setIcon(R.drawable.cat)
+                }
             }
         }.attach()
         return view
     }
-//
-//    override fun onSaveInstanceState(outState: Bundle) {
-//        super.onSaveInstanceState(outState)
-//        outState.putInt("position", position)
-//    }
 }
