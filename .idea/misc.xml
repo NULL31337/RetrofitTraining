@@ -11,6 +11,8 @@
         <entry key="..\:/RetrofitTraining/app/src/main/res/layout/fragment_crate_posts_text_range.xml" value="0.264" />
         <entry key="..\:/RetrofitTraining/app/src/main/res/layout/fragment_crate_posts_userid_range.xml" value="0.17604166666666668" />
         <entry key="..\:/RetrofitTraining/app/src/main/res/layout/fragment_create_posts_random.xml" value="0.11041666666666666" />
+        <entry key="..\:/RetrofitTraining/app/src/main/res/layout/fragment_delete_posts_by_pick.xml" value="0.11041666666666666" />
+        <entry key="..\:/RetrofitTraining/app/src/main/res/layout/fragment_delete_posts_userid.xml" value="0.1078125" />
         <entry key="..\:/RetrofitTraining/app/src/main/res/layout/fragment_list_note.xml" value="0.152" />
         <entry key="..\:/RetrofitTraining/app/src/main/res/layout/fragment_matrix.xml" value="0.11354166666666667" />
         <entry key="..\:/RetrofitTraining/app/src/main/res/layout/fragment_menu.xml" value="0.4" />
@@ -23,6 +25,7 @@
         <entry key="..\:/RetrofitTraining/app/src/main/res/layout/layout_money.xml" value="0.4195624195624196" />
         <entry key="..\:/RetrofitTraining/app/src/main/res/layout/layout_note.xml" value="0.16911764705882354" />
         <entry key="..\:/RetrofitTraining/app/src/main/res/layout/layout_post.xml" value="0.1" />
+        <entry key="..\:/RetrofitTraining/app/src/main/res/layout/layout_post_with_checkbox.xml" value="0.264" />
         <entry key="..\:/RetrofitTraining/app/src/main/res/layout/tutorial_main_fragment.xml" value="0.11302083333333333" />
         <entry key="..\:/RetrofitTraining/app/src/main/res/layout/tutorial_one_fragment.xml" value="0.28894806924101196" />
         <entry key="..\:/RetrofitTraining/app/src/main/res/layout/tutorial_three_fragment.xml" value="0.11302083333333333" />

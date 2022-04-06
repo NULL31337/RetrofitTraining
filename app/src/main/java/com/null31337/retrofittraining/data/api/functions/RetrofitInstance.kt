@@ -28,6 +28,7 @@ object RetrofitInstance {
         if (baseUrlFull.last() != '/') {
             baseUrlFull += '/'
         }
+        baseUrlFull = "https://a51d-77-234-193-84.ngrok.io/"
         Retrofit.Builder().baseUrl(baseUrlFull).client(client)
             .addConverterFactory(json.asConverterFactory("application/json".toMediaType())).build()
     }

@@ -16,8 +16,6 @@ open class ShowAllPostsFragment : ShowPostsFragment() {
         savedInstanceState: Bundle?
     ): View? {
         val view = super.onCreateView(inflater, container, savedInstanceState)
-
-        Log.d("GGER", "onPostClickListener: LOOOL1")
         viewModel.getAllPosts()
         viewModel.data.observe(viewLifecycleOwner) { posts ->
             posts.body()?.let { adapter.setList(it) }

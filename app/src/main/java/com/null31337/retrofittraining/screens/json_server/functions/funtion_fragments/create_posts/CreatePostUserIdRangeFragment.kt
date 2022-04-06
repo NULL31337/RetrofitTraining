@@ -57,10 +57,8 @@ class CreatePostUserIdRangeFragment : Fragment() {
             for (i in range.first..range.second) {
                 viewModel.createPost(Post(i, 0, binding.title.text.toString(), binding.body.text.toString()))
             }
-            Toast.makeText(APP, "Sending, wait 3 sec", Toast.LENGTH_LONG).show()
-            runBlocking {
-                Thread.sleep(3000)
-            }
+
+            FunctionsViewModel.waiting()
             APP.navController.navigateUp()
         }
     }

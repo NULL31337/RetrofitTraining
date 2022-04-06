@@ -11,7 +11,9 @@ import com.null31337.retrofittraining.screens.json_server.functions.funtion_frag
 import com.null31337.retrofittraining.screens.json_server.functions.funtion_fragments.create_posts.CreatePostUserIdRangeFragment
 import com.null31337.retrofittraining.screens.json_server.functions.funtion_fragments.create_posts.CreatePostWithRangeTextFragment
 import com.null31337.retrofittraining.screens.json_server.functions.funtion_fragments.create_posts.CreatePostsFragment
+import com.null31337.retrofittraining.screens.json_server.functions.funtion_fragments.delete_posts.DeleteByUsersIdFragment
 import com.null31337.retrofittraining.screens.json_server.functions.funtion_fragments.delete_posts.DeletePostFragment
+import com.null31337.retrofittraining.screens.json_server.functions.funtion_fragments.delete_posts.DeletePostPickFragment
 import com.null31337.retrofittraining.screens.json_server.functions.funtion_fragments.show_posts.ShowAllPostsFragment
 
 class FunctionsAdapter : RecyclerView.Adapter<FunctionsAdapter.FunctionsViewHolder>() {
@@ -19,6 +21,8 @@ class FunctionsAdapter : RecyclerView.Adapter<FunctionsAdapter.FunctionsViewHold
     }
 
     val data = listOf(
+        DeletePostPickFragment.buttonInfo,
+        DeleteByUsersIdFragment.buttonInfo,
         ShowAllPostsFragment.buttonInfo,
         DeletePostFragment.buttonInfo,
         CreatePostsFragment.buttonInfo,

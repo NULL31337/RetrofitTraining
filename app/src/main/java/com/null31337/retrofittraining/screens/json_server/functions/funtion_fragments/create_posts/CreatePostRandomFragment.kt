@@ -48,10 +48,8 @@ class CreatePostRandomFragment : Fragment() {
             for (i in 1..count) {
                 viewModel.createPost(Post(Random.nextUInt().toInt(), 0, generateText(), generateText()))
             }
-            Toast.makeText(APP, "Sending, wait 3 sec", Toast.LENGTH_LONG).show()
-            runBlocking {
-                Thread.sleep(3000)
-            }
+
+            FunctionsViewModel.waiting()
             APP.navController.navigateUp()
         }
 
@@ -60,7 +58,7 @@ class CreatePostRandomFragment : Fragment() {
 
     companion object {
         val buttonInfo =
-            ButtonInfo("Create random posts", R.id.createPostRandomFragment)
+            ButtonInfo("Create random posts", R.id.action_functionsFragment_to_createPostRandomFragment)
 
         fun generateText() = buildString {
             repeat(50) {

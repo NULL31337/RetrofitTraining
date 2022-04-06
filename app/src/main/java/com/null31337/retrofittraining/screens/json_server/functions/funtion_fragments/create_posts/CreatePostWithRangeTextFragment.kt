@@ -75,10 +75,8 @@ class CreatePostWithRangeTextFragment : Fragment() {
                     )
                 )
             }
-            Toast.makeText(APP, "Sending, wait 3 sec", Toast.LENGTH_LONG).show()
-            runBlocking {
-                Thread.sleep(3000)
-            }
+
+            FunctionsViewModel.waiting()
             APP.navController.navigateUp()
         }
     }

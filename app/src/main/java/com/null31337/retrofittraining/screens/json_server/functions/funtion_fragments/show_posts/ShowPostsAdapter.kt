@@ -29,7 +29,6 @@ class ShowPostsAdapter: RecyclerView.Adapter<ShowPostsAdapter.ShowPostsViewHolde
         holder.itemView.findViewById<TextView>(R.id.title).text = "title: " + data[position].title
         holder.itemView.findViewById<TextView>(R.id.body).text = "body: " + data[position].body
         holder.itemView.setOnClickListener {
-            Log.d("TAG", "onBindViewHolder: KEKW")
             listener?.invoke(position)
         }
     }

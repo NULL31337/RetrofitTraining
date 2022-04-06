@@ -6,11 +6,11 @@ import kotlinx.serialization.Serializable
 @Serializable
 data class Post (
     @SerialName("userId")
-    val userId: Int,
+    val userId: Int = -1,
     @SerialName("id")
-    val id: Int,
+    val id: Int = -1,
     @SerialName("title")
-    val title: String,
+    val title: String = "Pepega",
     @SerialName("body")
-    val body: String,
+    val body: String = "42",
 )
