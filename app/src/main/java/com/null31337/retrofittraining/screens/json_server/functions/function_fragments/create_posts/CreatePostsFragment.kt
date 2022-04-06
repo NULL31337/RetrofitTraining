@@ -8,13 +8,13 @@ import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import com.null31337.retrofittraining.APP
 import com.null31337.retrofittraining.R
-import com.null31337.retrofittraining.databinding.FragmentCratePostsBinding
+import com.null31337.retrofittraining.databinding.FragmentCreatePostsBinding
 import com.null31337.retrofittraining.model.functions.Post
 import com.null31337.retrofittraining.screens.json_server.functions.FunctionsViewModel
 import com.null31337.retrofittraining.screens.json_server.functions.function_fragments.ButtonInfo
 
 class CreatePostsFragment : Fragment() {
-    private lateinit var binding: FragmentCratePostsBinding
+    private lateinit var binding: FragmentCreatePostsBinding
     private lateinit var viewModel: FunctionsViewModel
 
     override fun onCreateView(
@@ -22,7 +22,7 @@ class CreatePostsFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        binding = FragmentCratePostsBinding.inflate(layoutInflater, container, false)
+        binding = FragmentCreatePostsBinding.inflate(layoutInflater, container, false)
         viewModel = ViewModelProvider(this)[FunctionsViewModel::class.java]
         init()
 

@@ -9,14 +9,14 @@ import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import com.null31337.retrofittraining.APP
 import com.null31337.retrofittraining.R
-import com.null31337.retrofittraining.databinding.FragmentCratePostsTextRangeBinding
+import com.null31337.retrofittraining.databinding.FragmentCreatePostsTextRangeBinding
 import com.null31337.retrofittraining.model.functions.Post
 import com.null31337.retrofittraining.screens.json_server.functions.FunctionsViewModel
 import com.null31337.retrofittraining.screens.json_server.functions.function_fragments.ButtonInfo
 
 
 class CreatePostWithRangeTextFragment : Fragment() {
-    private lateinit var binding: FragmentCratePostsTextRangeBinding
+    private lateinit var binding: FragmentCreatePostsTextRangeBinding
     private lateinit var viewModel: FunctionsViewModel
 
     override fun onCreateView(
@@ -24,7 +24,7 @@ class CreatePostWithRangeTextFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        binding = FragmentCratePostsTextRangeBinding.inflate(layoutInflater, container, false)
+        binding = FragmentCreatePostsTextRangeBinding.inflate(layoutInflater, container, false)
         viewModel = ViewModelProvider(this)[FunctionsViewModel::class.java]
         init()
 

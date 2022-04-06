@@ -1,11 +1,3 @@
-@file:Suppress(
-    "RedundantNullableReturnType", "RedundantNullableReturnType",
-    "RedundantNullableReturnType", "RedundantNullableReturnType", "RedundantNullableReturnType",
-    "RedundantNullableReturnType", "RedundantNullableReturnType", "RedundantNullableReturnType",
-    "RedundantNullableReturnType", "RedundantNullableReturnType", "RedundantNullableReturnType",
-    "RedundantNullableReturnType", "RedundantNullableReturnType", "RedundantNullableReturnType"
-)
-
 package com.null31337.retrofittraining.screens.json_server.functions.function_fragments.create_posts
 
 import android.os.Bundle
