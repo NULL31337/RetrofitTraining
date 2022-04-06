@@ -1,7 +1,8 @@
 # RetrofitTraining
 Многомодульный проект в которм пробую что-то новое
 
-1) Текущий курс валют (Retrofit + GET)
-2) Анимированная View
-3) Заметки (Dao)
-4) //TODO Лента с котиками (Coil)
+1) http database (Retrofit(All))
+2) Текущий курс валют (Retrofit(GET))
+3) Заметки (Room)
+4) Анимированная View
+5) //TODO Лента с котиками (Coil)
