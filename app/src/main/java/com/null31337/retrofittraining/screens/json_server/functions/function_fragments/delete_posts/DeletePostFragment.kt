@@ -1,4 +1,4 @@
-package com.null31337.retrofittraining.screens.json_server.functions.funtion_fragments.delete_posts
+package com.null31337.retrofittraining.screens.json_server.functions.function_fragments.delete_posts
 
 import android.app.AlertDialog
 import android.content.DialogInterface
@@ -8,8 +8,8 @@ import android.view.View
 import android.view.ViewGroup
 import com.null31337.retrofittraining.APP
 import com.null31337.retrofittraining.R
-import com.null31337.retrofittraining.screens.json_server.functions.funtion_fragments.ButtonInfo
-import com.null31337.retrofittraining.screens.json_server.functions.funtion_fragments.show_posts.ShowAllPostsFragment
+import com.null31337.retrofittraining.screens.json_server.functions.function_fragments.ButtonInfo
+import com.null31337.retrofittraining.screens.json_server.functions.function_fragments.show_posts.ShowAllPostsFragment
 
 class DeletePostFragment : ShowAllPostsFragment() {
     override fun onCreateView(

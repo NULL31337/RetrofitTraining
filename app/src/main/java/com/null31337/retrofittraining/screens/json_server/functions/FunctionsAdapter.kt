@@ -7,18 +7,17 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.null31337.retrofittraining.APP
 import com.null31337.retrofittraining.R
-import com.null31337.retrofittraining.screens.json_server.functions.funtion_fragments.create_posts.CreatePostRandomFragment
-import com.null31337.retrofittraining.screens.json_server.functions.funtion_fragments.create_posts.CreatePostUserIdRangeFragment
-import com.null31337.retrofittraining.screens.json_server.functions.funtion_fragments.create_posts.CreatePostWithRangeTextFragment
-import com.null31337.retrofittraining.screens.json_server.functions.funtion_fragments.create_posts.CreatePostsFragment
-import com.null31337.retrofittraining.screens.json_server.functions.funtion_fragments.delete_posts.DeleteByUsersIdFragment
-import com.null31337.retrofittraining.screens.json_server.functions.funtion_fragments.delete_posts.DeletePostFragment
-import com.null31337.retrofittraining.screens.json_server.functions.funtion_fragments.delete_posts.DeletePostPickFragment
-import com.null31337.retrofittraining.screens.json_server.functions.funtion_fragments.show_posts.ShowAllPostsFragment
+import com.null31337.retrofittraining.screens.json_server.functions.function_fragments.create_posts.CreatePostRandomFragment
+import com.null31337.retrofittraining.screens.json_server.functions.function_fragments.create_posts.CreatePostUserIdRangeFragment
+import com.null31337.retrofittraining.screens.json_server.functions.function_fragments.create_posts.CreatePostWithRangeTextFragment
+import com.null31337.retrofittraining.screens.json_server.functions.function_fragments.create_posts.CreatePostsFragment
+import com.null31337.retrofittraining.screens.json_server.functions.function_fragments.delete_posts.DeleteByUsersIdFragment
+import com.null31337.retrofittraining.screens.json_server.functions.function_fragments.delete_posts.DeletePostFragment
+import com.null31337.retrofittraining.screens.json_server.functions.function_fragments.delete_posts.DeletePostPickFragment
+import com.null31337.retrofittraining.screens.json_server.functions.function_fragments.show_posts.ShowAllPostsFragment
 
 class FunctionsAdapter : RecyclerView.Adapter<FunctionsAdapter.FunctionsViewHolder>() {
-    class FunctionsViewHolder(view: View) : RecyclerView.ViewHolder(view) {
-    }
+    class FunctionsViewHolder(view: View) : RecyclerView.ViewHolder(view)
 
     val data = listOf(
         DeletePostPickFragment.buttonInfo,

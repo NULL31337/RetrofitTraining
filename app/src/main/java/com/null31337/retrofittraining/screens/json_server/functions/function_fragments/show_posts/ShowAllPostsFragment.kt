@@ -1,13 +1,12 @@
-package com.null31337.retrofittraining.screens.json_server.functions.funtion_fragments.show_posts
+package com.null31337.retrofittraining.screens.json_server.functions.function_fragments.show_posts
 
 
 import android.os.Bundle
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.null31337.retrofittraining.R
-import com.null31337.retrofittraining.screens.json_server.functions.funtion_fragments.ButtonInfo
+import com.null31337.retrofittraining.screens.json_server.functions.function_fragments.ButtonInfo
 
 open class ShowAllPostsFragment : ShowPostsFragment() {
     override fun onCreateView(

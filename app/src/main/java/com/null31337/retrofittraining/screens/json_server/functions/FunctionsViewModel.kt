@@ -12,12 +12,12 @@ import kotlinx.coroutines.runBlocking
 import retrofit2.Response
 
 
-class FunctionsViewModel: ViewModel() {
-    var rep = FunctionsRepository()
+class FunctionsViewModel : ViewModel() {
+    private var rep = FunctionsRepository()
     var data: MutableLiveData<Response<List<Post>>> = MutableLiveData()
     fun getAllPosts() {
         viewModelScope.launch {
-            var tmp = rep.getAllPosts()
+            val tmp = rep.getAllPosts()
             data.value = tmp
         }
     }
@@ -27,6 +27,7 @@ class FunctionsViewModel: ViewModel() {
             rep.deleteById(id)
         }
     }
+
     fun createPost(post: Post) {
         viewModelScope.launch {
             rep.createPost(post)

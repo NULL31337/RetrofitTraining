@@ -1,6 +1,5 @@
-package com.null31337.retrofittraining.screens.json_server.functions.funtion_fragments.create_posts
+package com.null31337.retrofittraining.screens.json_server.functions.function_fragments.create_posts
 
-import android.graphics.Color
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -12,7 +11,7 @@ import com.null31337.retrofittraining.R
 import com.null31337.retrofittraining.databinding.FragmentCratePostsBinding
 import com.null31337.retrofittraining.model.functions.Post
 import com.null31337.retrofittraining.screens.json_server.functions.FunctionsViewModel
-import com.null31337.retrofittraining.screens.json_server.functions.funtion_fragments.ButtonInfo
+import com.null31337.retrofittraining.screens.json_server.functions.function_fragments.ButtonInfo
 
 class CreatePostsFragment : Fragment() {
     private lateinit var binding: FragmentCratePostsBinding
@@ -22,7 +21,7 @@ class CreatePostsFragment : Fragment() {
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         binding = FragmentCratePostsBinding.inflate(layoutInflater, container, false)
         viewModel = ViewModelProvider(this)[FunctionsViewModel::class.java]
         init()

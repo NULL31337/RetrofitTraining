@@ -1,7 +1,6 @@
 package com.null31337.retrofittraining.screens.note.list
 
 import android.os.Bundle
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -22,17 +21,17 @@ class NoteListFragment : Fragment() {
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         binding = FragmentListNoteBinding.inflate(layoutInflater, container, false)
         return binding.root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        init(view)
+        init()
     }
 
-    private fun init(view: View) {
+    private fun init() {
         val viewModel = ViewModelProvider(this)[NoteViewModel::class.java]
         viewModel.initDatabase()
         recyclerView = binding.notesRecyclerView

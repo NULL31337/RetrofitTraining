@@ -1,10 +1,9 @@
-package com.null31337.retrofittraining.screens.json_server.functions.funtion_fragments.create_posts
+package com.null31337.retrofittraining.screens.json_server.functions.function_fragments.create_posts
 
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import com.null31337.retrofittraining.APP
@@ -12,8 +11,7 @@ import com.null31337.retrofittraining.R
 import com.null31337.retrofittraining.databinding.FragmentCratePostsUseridRangeBinding
 import com.null31337.retrofittraining.model.functions.Post
 import com.null31337.retrofittraining.screens.json_server.functions.FunctionsViewModel
-import com.null31337.retrofittraining.screens.json_server.functions.funtion_fragments.ButtonInfo
-import kotlinx.coroutines.runBlocking
+import com.null31337.retrofittraining.screens.json_server.functions.function_fragments.ButtonInfo
 
 class CreatePostUserIdRangeFragment : Fragment() {
     private lateinit var binding: FragmentCratePostsUseridRangeBinding
@@ -23,7 +21,7 @@ class CreatePostUserIdRangeFragment : Fragment() {
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         binding = FragmentCratePostsUseridRangeBinding.inflate(layoutInflater, container, false)
         viewModel = ViewModelProvider(this)[FunctionsViewModel::class.java]
         init()
@@ -55,7 +53,14 @@ class CreatePostUserIdRangeFragment : Fragment() {
                 return@setOnClickListener
             }
             for (i in range.first..range.second) {
-                viewModel.createPost(Post(i, 0, binding.title.text.toString(), binding.body.text.toString()))
+                viewModel.createPost(
+                    Post(
+                        i,
+                        0,
+                        binding.title.text.toString(),
+                        binding.body.text.toString()
+                    )
+                )
             }
 
             FunctionsViewModel.waiting()

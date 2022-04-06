@@ -1,12 +1,10 @@
-package com.null31337.retrofittraining.screens.json_server.functions.funtion_fragments.create_posts
+package com.null31337.retrofittraining.screens.json_server.functions.function_fragments.create_posts
 
 import android.os.Bundle
 import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Toast
-import androidx.core.content.ContextCompat.getSystemService
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import com.null31337.retrofittraining.APP
@@ -14,8 +12,7 @@ import com.null31337.retrofittraining.R
 import com.null31337.retrofittraining.databinding.FragmentCratePostsTextRangeBinding
 import com.null31337.retrofittraining.model.functions.Post
 import com.null31337.retrofittraining.screens.json_server.functions.FunctionsViewModel
-import com.null31337.retrofittraining.screens.json_server.functions.funtion_fragments.ButtonInfo
-import kotlinx.coroutines.runBlocking
+import com.null31337.retrofittraining.screens.json_server.functions.function_fragments.ButtonInfo
 
 
 class CreatePostWithRangeTextFragment : Fragment() {
@@ -26,7 +23,7 @@ class CreatePostWithRangeTextFragment : Fragment() {
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         binding = FragmentCratePostsTextRangeBinding.inflate(layoutInflater, container, false)
         viewModel = ViewModelProvider(this)[FunctionsViewModel::class.java]
         init()

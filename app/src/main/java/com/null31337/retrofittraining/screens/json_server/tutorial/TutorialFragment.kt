@@ -7,7 +7,7 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import com.null31337.retrofittraining.databinding.TutorialMainFragmentBinding
 
-class TutorialFragment: Fragment() {
+class TutorialFragment : Fragment() {
     private lateinit var binding: TutorialMainFragmentBinding
     private lateinit var adapter: TutorialPagerAdapter
 
@@ -15,7 +15,7 @@ class TutorialFragment: Fragment() {
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         binding = TutorialMainFragmentBinding.inflate(layoutInflater, container, false)
         adapter = TutorialPagerAdapter(requireActivity().supportFragmentManager, lifecycle)
         binding.viewPagerTutorial.adapter = adapter

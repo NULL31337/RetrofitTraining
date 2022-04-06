@@ -6,7 +6,6 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
-import com.null31337.retrofittraining.APP
 import com.null31337.retrofittraining.R
 import com.null31337.retrofittraining.model.note.NoteModel
 
@@ -33,6 +32,7 @@ class NoteAdapter : RecyclerView.Adapter<NoteAdapter.NoteViewHolder>() {
         return data.size
     }
 
+    @SuppressLint("NotifyDataSetChanged")
     fun setList(l: List<NoteModel>) {
         data = l
         notifyDataSetChanged()

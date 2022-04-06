@@ -14,26 +14,27 @@ import com.null31337.retrofittraining.APP
 import com.null31337.retrofittraining.databinding.TutorialTwoFragmentBinding
 
 
-class SecondStepFragment : Fragment(){
+class SecondStepFragment : Fragment() {
     private lateinit var binding: TutorialTwoFragmentBinding
 
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         binding = TutorialTwoFragmentBinding.inflate(layoutInflater, container, false)
         return binding.root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        init(view)
+        init()
     }
 
-    private fun init(view: View) {
+    private fun init() {
         binding.linkBtn.setOnClickListener {
-            val clipboard: ClipboardManager = APP.getSystemService(Context.CLIPBOARD_SERVICE) as ClipboardManager
+            val clipboard: ClipboardManager =
+                APP.getSystemService(Context.CLIPBOARD_SERVICE) as ClipboardManager
             val clip = ClipData.newHtmlText("Free host", "https://ngrok.com/", "https://ngrok.com/")
             clipboard.setPrimaryClip(clip)
         }

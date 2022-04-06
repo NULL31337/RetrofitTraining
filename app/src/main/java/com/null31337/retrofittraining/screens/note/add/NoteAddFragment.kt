@@ -7,7 +7,6 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import com.null31337.retrofittraining.APP
-import com.null31337.retrofittraining.R
 import com.null31337.retrofittraining.databinding.FragmentAddNoteBinding
 import com.null31337.retrofittraining.model.note.NoteModel
 
@@ -18,7 +17,7 @@ class NoteAddFragment : Fragment() {
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         binding = FragmentAddNoteBinding.inflate(layoutInflater, container, false)
         return binding.root
     }

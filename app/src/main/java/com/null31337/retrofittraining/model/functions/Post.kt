@@ -4,7 +4,7 @@ import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable
 
 @Serializable
-data class Post (
+data class Post(
     @SerialName("userId")
     val userId: Int = -1,
     @SerialName("id")

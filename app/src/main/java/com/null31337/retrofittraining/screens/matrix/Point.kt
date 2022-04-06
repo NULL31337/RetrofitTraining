@@ -1,6 +1,5 @@
 package com.null31337.retrofittraining.screens.matrix
 
-import java.util.*
 import kotlin.random.Random
 
 data class Point(

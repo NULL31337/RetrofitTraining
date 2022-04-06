@@ -1,21 +1,18 @@
-package com.null31337.retrofittraining.screens.json_server.functions.funtion_fragments.delete_posts
+package com.null31337.retrofittraining.screens.json_server.functions.function_fragments.delete_posts
 
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import com.null31337.retrofittraining.APP
 import com.null31337.retrofittraining.R
 import com.null31337.retrofittraining.databinding.FragmentDeletePostsByPickBinding
-import com.null31337.retrofittraining.databinding.FragmentShowPostsBinding
 import com.null31337.retrofittraining.screens.json_server.functions.FunctionsViewModel
 import com.null31337.retrofittraining.screens.json_server.functions.FunctionsViewModel.Companion.waiting
-import com.null31337.retrofittraining.screens.json_server.functions.funtion_fragments.ButtonInfo
-import com.null31337.retrofittraining.screens.json_server.functions.funtion_fragments.delete_posts.pick.CheckboxAdapter
-import com.null31337.retrofittraining.screens.json_server.functions.funtion_fragments.show_posts.ShowPostsAdapter
+import com.null31337.retrofittraining.screens.json_server.functions.function_fragments.ButtonInfo
+import com.null31337.retrofittraining.screens.json_server.functions.function_fragments.delete_posts.pick.CheckboxAdapter
 
 class DeletePostPickFragment : Fragment() {
     private lateinit var binding: FragmentDeletePostsByPickBinding
@@ -31,7 +28,7 @@ class DeletePostPickFragment : Fragment() {
         viewModel = ViewModelProvider(this)[FunctionsViewModel::class.java]
 
         adapter = CheckboxAdapter()
-        binding.showPosts.functionsBtns.adapter = adapter
+        binding.showPosts.functionsBtn.adapter = adapter
         init()
 
         return binding.root
@@ -53,7 +50,10 @@ class DeletePostPickFragment : Fragment() {
 
     companion object {
         val buttonInfo =
-            ButtonInfo("Delete posts by pick", R.id.action_functionsFragment_to_deletePostPickFragment);
+            ButtonInfo(
+                "Delete posts by pick",
+                R.id.action_functionsFragment_to_deletePostPickFragment
+            )
     }
 
 }

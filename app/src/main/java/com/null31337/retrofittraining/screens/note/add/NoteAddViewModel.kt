@@ -9,7 +9,7 @@ import kotlinx.coroutines.launch
 
 class NoteAddViewModel : ViewModel() {
     fun insert(noteModel: NoteModel, onSuccess: () -> Unit) {
-        viewModelScope.launch (Dispatchers.IO) {
+        viewModelScope.launch(Dispatchers.IO) {
             REPOSITORY.insert(noteModel) {
                 onSuccess()
             }

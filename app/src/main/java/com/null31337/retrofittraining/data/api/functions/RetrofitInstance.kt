@@ -15,7 +15,7 @@ object RetrofitInstance {
         ignoreUnknownKeys = true
     }
 
-     val client by lazy {
+    private val client by lazy {
         OkHttpClient().newBuilder()
             .addInterceptor(HttpLoggingInterceptor().setLevel(HttpLoggingInterceptor.Level.BODY))
             .build()

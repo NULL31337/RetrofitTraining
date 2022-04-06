@@ -1,3 +1,5 @@
+@file:Suppress("SpellCheckingInspection")
+
 package com.null31337.retrofittraining.model.money
 
 import kotlinx.serialization.SerialName

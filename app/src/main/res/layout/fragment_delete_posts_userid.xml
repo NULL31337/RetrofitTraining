@@ -9,35 +9,36 @@
         android:id="@+id/text"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginHorizontal="16dp"
+        android:hint="@string/hint_delete"
+        android:importantForAutofill="no"
+        android:inputType="text"
         app:layout_constraintBottom_toTopOf="@id/alert_create_btn"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:layout_marginHorizontal="16dp"
-        android:hint="UserId in format: 1, 2, 3, ..."/>
+        app:layout_constraintTop_toTopOf="parent" />
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/alert_create_btn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:text="@string/build_request"
+        android:textAllCaps="false"
         app:layout_constraintBottom_toTopOf="@id/delete_btn"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/text"
-        android:textAllCaps="false"
-        android:text="Build request"
-        />
+        app:layout_constraintTop_toBottomOf="@id/text" />
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/delete_btn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:text="@string/delete"
+        android:textAllCaps="false"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/alert_create_btn"
-        android:textAllCaps="false"
-        android:text="Delete"/>
+        app:layout_constraintTop_toBottomOf="@id/alert_create_btn" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

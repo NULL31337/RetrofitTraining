@@ -1,6 +1,5 @@
 package com.null31337.retrofittraining.screens.matrix
 
-import android.util.Log
 import kotlin.random.Random
 import kotlin.random.nextInt
 

@@ -10,7 +10,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.null31337.retrofittraining.databinding.FunctionsFragmentBinding
 
 
-class FunctionsFragment: Fragment() {
+class FunctionsFragment : Fragment() {
     private lateinit var binding: FunctionsFragmentBinding
     lateinit var viewModel: FunctionsViewModel
     lateinit var adapter: FunctionsAdapter
@@ -21,11 +21,11 @@ class FunctionsFragment: Fragment() {
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         viewModel = ViewModelProvider(this)[FunctionsViewModel::class.java]
         binding = FunctionsFragmentBinding.inflate(layoutInflater, container, false)
 
-        recyclerView = binding.functionsBtns
+        recyclerView = binding.functionsBtn
         adapter = FunctionsAdapter()
         recyclerView.adapter = adapter
 
@@ -34,9 +34,9 @@ class FunctionsFragment: Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        init(view)
+        init()
     }
 
-    private fun init(view: View) {
+    private fun init() {
     }
 }

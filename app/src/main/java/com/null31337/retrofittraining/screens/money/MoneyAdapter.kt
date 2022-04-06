@@ -19,15 +19,18 @@ class MoneyAdapter : RecyclerView.Adapter<MoneyAdapter.MoneyViewHolder>() {
     override fun onCreateViewHolder(
         parent: ViewGroup,
         viewType: Int
-    ): MoneyAdapter.MoneyViewHolder {
+    ): MoneyViewHolder {
         val view = LayoutInflater.from(parent.context).inflate(R.layout.layout_money, parent, false)
         return MoneyViewHolder(view)
     }
 
     override fun onBindViewHolder(holder: MoneyViewHolder, position: Int) {
-        holder.itemView.findViewById<TextView>(R.id.money_name_value).text = listMoney[position].name
-        holder.itemView.findViewById<TextView>(R.id.money_previous_value).text = listMoney[position].previous.toString()
-        holder.itemView.findViewById<TextView>(R.id.money_current_value).text = listMoney[position].current.toString()
+        holder.itemView.findViewById<TextView>(R.id.money_name_value).text =
+            listMoney[position].name
+        holder.itemView.findViewById<TextView>(R.id.money_previous_value).text =
+            listMoney[position].previous.toString()
+        holder.itemView.findViewById<TextView>(R.id.money_current_value).text =
+            listMoney[position].current.toString()
     }
 
     override fun getItemCount(): Int {

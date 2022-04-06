@@ -1,23 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:elevation="3dp"
     android:layout_margin="8dp"
-    >
+    android:elevation="3dp">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="16dp"
-        >
+        android:layout_margin="16dp">
 
         <TextView
             android:id="@+id/userId"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="userId: "
+            android:text="@string/userid"
             android:textColor="#009688"
 
             app:layout_constraintBottom_toTopOf="@+id/id"
@@ -29,7 +27,7 @@
             android:id="@+id/id"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="id: "
+            android:text="@string/id"
 
             android:textColor="#4CAF50"
             app:layout_constraintBottom_toTopOf="@+id/title"
@@ -41,7 +39,7 @@
             android:id="@+id/title"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="title: "
+            android:text="@string/title"
 
 
             android:textColor="#8BC34A"
@@ -54,7 +52,7 @@
             android:id="@+id/body"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="body: "
+            android:text="@string/body"
 
             android:textColor="#CDDC39"
             app:layout_constraintBottom_toBottomOf="parent"

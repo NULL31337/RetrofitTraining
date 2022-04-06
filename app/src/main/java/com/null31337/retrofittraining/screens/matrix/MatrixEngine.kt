@@ -17,7 +17,7 @@ class MatrixEngine(context: Context, attrs: AttributeSet?, defStyleAttr: Int) :
     private var render: MatrixRender = MatrixRender()
     private var drawingJob: Job? = null
 
-    var time = System.nanoTime()
+    private var time = System.nanoTime()
 
 
     constructor(context: Context) : this(context, null, 0)

@@ -7,9 +7,9 @@ import com.null31337.retrofittraining.model.note.NoteModel
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 
-class NoteShowViewModel: ViewModel() {
+class NoteShowViewModel : ViewModel() {
     fun delete(noteModel: NoteModel, onSuccess: () -> Unit) {
-        viewModelScope.launch (Dispatchers.IO) {
+        viewModelScope.launch(Dispatchers.IO) {
             REPOSITORY.delete(noteModel) {
                 onSuccess()
             }

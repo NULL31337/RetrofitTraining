@@ -7,7 +7,6 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import com.null31337.retrofittraining.APP
-import com.null31337.retrofittraining.R
 import com.null31337.retrofittraining.databinding.FragmentShowNoteBinding
 import com.null31337.retrofittraining.model.note.NoteModel
 
@@ -20,7 +19,7 @@ class NoteShowFragment : Fragment() {
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         binding = FragmentShowNoteBinding.inflate(layoutInflater, container, false)
         currentNode = arguments?.getSerializable("note") as NoteModel
         binding.noteText.text = currentNode.text

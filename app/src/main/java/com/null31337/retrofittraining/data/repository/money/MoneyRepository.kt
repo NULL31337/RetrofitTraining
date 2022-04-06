@@ -5,7 +5,7 @@ import com.null31337.retrofittraining.model.money.Money
 import retrofit2.Response
 
 class MoneyRepository {
-    suspend fun getMoney() : Response<Money> {
+    suspend fun getMoney(): Response<Money> {
         return RetrofitInstance.api.getMoney()
     }
 

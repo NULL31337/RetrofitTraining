@@ -3,17 +3,9 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="MATRIX"
-        android:textColor="@color/dark_red"
-        android:gravity="center"
-        android:textSize="100sp"/>
-
     <com.null31337.retrofittraining.screens.matrix.MatrixEngine
         android:id="@+id/matrixSurfaceView"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"/>
+        android:layout_height="match_parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

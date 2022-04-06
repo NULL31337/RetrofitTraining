@@ -1,22 +1,18 @@
-package com.null31337.retrofittraining.screens.json_server.functions.funtion_fragments.create_posts
+package com.null31337.retrofittraining.screens.json_server.functions.function_fragments.create_posts
 
 import android.os.Bundle
 import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Toast
-import androidx.core.content.ContextCompat.getSystemService
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import com.null31337.retrofittraining.APP
 import com.null31337.retrofittraining.R
 import com.null31337.retrofittraining.databinding.FragmentCratePostsDoubleRangeBinding
-import com.null31337.retrofittraining.databinding.FragmentCratePostsTextRangeBinding
 import com.null31337.retrofittraining.model.functions.Post
 import com.null31337.retrofittraining.screens.json_server.functions.FunctionsViewModel
-import com.null31337.retrofittraining.screens.json_server.functions.funtion_fragments.ButtonInfo
-import kotlinx.coroutines.runBlocking
+import com.null31337.retrofittraining.screens.json_server.functions.function_fragments.ButtonInfo
 
 
 class CreatePostWithDoubleRange : Fragment() {
@@ -27,7 +23,7 @@ class CreatePostWithDoubleRange : Fragment() {
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         binding = FragmentCratePostsDoubleRangeBinding.inflate(layoutInflater, container, false)
         viewModel = ViewModelProvider(this)[FunctionsViewModel::class.java]
         init()
@@ -64,7 +60,7 @@ class CreatePostWithDoubleRange : Fragment() {
                 binding.rangeRight.error = "Left border must be not more than right border"
                 return@setOnClickListener
             }
-            if (rangeText.second - rangeText.first  > 20) {
+            if (rangeText.second - rangeText.first > 20) {
                 binding.rangeLeft.error = "Pls create a smaller range"
                 binding.rangeRight.error = "Pls create a smaller range"
                 return@setOnClickListener
@@ -74,7 +70,7 @@ class CreatePostWithDoubleRange : Fragment() {
                 binding.rangeRight.error = "Left border must be not more than right border"
                 return@setOnClickListener
             }
-            if (rangeUserId.second - rangeUserId.first  > 20) {
+            if (rangeUserId.second - rangeUserId.first > 20) {
                 binding.userIdLeft.error = "Pls create a smaller range"
                 binding.userIdRight.error = "Pls create a smaller range"
                 return@setOnClickListener
@@ -108,7 +104,8 @@ class CreatePostWithDoubleRange : Fragment() {
                 val fragmentSize = rangeUserIdSize / rangeTextSize
                 var cnt = 0
                 for (i in rangeUserId.first..rangeUserId.second) {
-                    val title = binding.title.text.toString().split("#").joinToString(text.toString())
+                    val title =
+                        binding.title.text.toString().split("#").joinToString(text.toString())
                     val body = binding.body.text.toString().split("#").joinToString(text.toString())
                     Log.d("TAG", "init: $title \n $body")
                     viewModel.createPost(

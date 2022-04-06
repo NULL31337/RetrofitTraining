@@ -19,7 +19,7 @@ class MoneyFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        val viewModel = ViewModelProvider(this).get(MoneyViewModel::class.java)
+        val viewModel = ViewModelProvider(this)[MoneyViewModel::class.java]
         val view = inflater.inflate(R.layout.fragment_money, container, false)
 
         recyclerView = view.findViewById(R.id.moneyRecyclerView)

@@ -29,7 +29,8 @@ class RootFragment : Fragment() {
     ): View? {
         val view = inflater.inflate(R.layout.fragment_root, container, false)
         view.findViewById<TabLayout>(R.id.tabLayout).tabIconTint = null
-        view.findViewById<ViewPager2>(R.id.view_pager_root).adapter = ViewPagerAdapter(ctx as FragmentActivity)
+        view.findViewById<ViewPager2>(R.id.view_pager_root).adapter =
+            ViewPagerAdapter(ctx as FragmentActivity)
         TabLayoutMediator(
             view.findViewById(R.id.tabLayout),
             view.findViewById(R.id.view_pager_root)

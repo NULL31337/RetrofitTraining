@@ -6,15 +6,15 @@ import retrofit2.http.*
 
 interface ApiService {
     @GET("posts")
-    suspend fun getAllPosts() : Response<List<Post>>
+    suspend fun getAllPosts(): Response<List<Post>>
 
     @POST("posts")
     suspend fun postPost(
         @Body post: Post
-    ) : Response<Post>
+    ): Response<Post>
 
     @DELETE("posts/{id}")
     suspend fun deleteById(
         @Path("id") id: Int
-    ) : Response<Post>
+    ): Response<Post>
 }

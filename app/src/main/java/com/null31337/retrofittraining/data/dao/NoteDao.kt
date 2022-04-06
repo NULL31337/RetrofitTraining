@@ -6,7 +6,6 @@ import com.null31337.retrofittraining.model.note.NoteModel
 
 @Dao
 interface NoteDao {
-
     @Insert(onConflict = OnConflictStrategy.IGNORE)
     suspend fun insert(noteModel: NoteModel)
 
@@ -14,6 +13,6 @@ interface NoteDao {
     suspend fun delete(noteModel: NoteModel)
 
     @Query("SELECT * from note_table")
-    fun getAllNotes() : LiveData<List<NoteModel>>
+    fun getAllNotes(): LiveData<List<NoteModel>>
 
 }

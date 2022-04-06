@@ -9,7 +9,7 @@ import kotlinx.coroutines.launch
 import retrofit2.Response
 
 class MoneyViewModel : ViewModel() {
-    var rep = MoneyRepository()
+    private var rep = MoneyRepository()
     var moneyList: MutableLiveData<Response<Money>> = MutableLiveData()
 
     fun getMoney() {

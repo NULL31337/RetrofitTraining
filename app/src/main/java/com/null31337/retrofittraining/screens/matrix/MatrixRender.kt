@@ -12,9 +12,9 @@ class MatrixRender {
     )
 
     fun draw(canvas: Canvas, model: MatrixModel, bitmap: Bitmap) {
-        paint.color = Color.BLACK;
-        paint.style = Paint.Style.FILL;
-        canvas.drawRect(0f, 0f, canvas.width.toFloat(), canvas.height.toFloat(), paint);
+        paint.color = Color.BLACK
+        paint.style = Paint.Style.FILL
+        canvas.drawRect(0f, 0f, canvas.width.toFloat(), canvas.height.toFloat(), paint)
         val list = model.getPoints()
         for (i in list) {
             for (j in 0..9) {

@@ -16,7 +16,7 @@ class ViewPagerAdapter(fragment: FragmentActivity) : FragmentStateAdapter(fragme
 
 
     override fun createFragment(position: Int): Fragment {
-        return when(position) {
+        return when (position) {
             3 -> MoneyFragment()
             1 -> MatrixFragment()
             2 -> NoteListFragment()

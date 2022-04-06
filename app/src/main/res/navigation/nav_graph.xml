@@ -15,7 +15,7 @@
     <fragment
         android:id="@+id/rootFragment"
         android:name="com.null31337.retrofittraining.screens.root.RootFragment"
-        android:label="RootFragment" >
+        android:label="RootFragment">
         <action
             android:id="@+id/action_rootFragment_to_noteAddFragment"
             app:destination="@id/noteAddFragment" />
@@ -36,7 +36,7 @@
     <fragment
         android:id="@+id/functionsFragment"
         android:name="com.null31337.retrofittraining.screens.json_server.functions.FunctionsFragment"
-        android:label="FunctionsFragment" >
+        android:label="FunctionsFragment">
         <action
             android:id="@+id/action_functionsFragment_to_showPostsFragment"
             app:destination="@id/showPostsFragment" />
@@ -70,42 +70,42 @@
     </fragment>
     <fragment
         android:id="@+id/showPostsFragment"
-        android:name="com.null31337.retrofittraining.screens.json_server.functions.funtion_fragments.show_posts.ShowPostsFragment"
+        android:name="com.null31337.retrofittraining.screens.json_server.functions.function_fragments.show_posts.ShowPostsFragment"
         android:label="ShowPostsFragment" />
     <fragment
         android:id="@+id/showAllPostsFragment"
-        android:name="com.null31337.retrofittraining.screens.json_server.functions.funtion_fragments.show_posts.ShowAllPostsFragment"
+        android:name="com.null31337.retrofittraining.screens.json_server.functions.function_fragments.show_posts.ShowAllPostsFragment"
         android:label="ShowAllPostsFragment" />
     <fragment
         android:id="@+id/deletePostFragment"
-        android:name="com.null31337.retrofittraining.screens.json_server.functions.funtion_fragments.delete_posts.DeletePostFragment"
+        android:name="com.null31337.retrofittraining.screens.json_server.functions.function_fragments.delete_posts.DeletePostFragment"
         android:label="DeletePostFragment" />
     <fragment
         android:id="@+id/createPostsFragment"
-        android:name="com.null31337.retrofittraining.screens.json_server.functions.funtion_fragments.create_posts.CreatePostsFragment"
+        android:name="com.null31337.retrofittraining.screens.json_server.functions.function_fragments.create_posts.CreatePostsFragment"
         android:label="CreatePostsFragment" />
     <fragment
         android:id="@+id/createPostUserIdRangeFragment"
-        android:name="com.null31337.retrofittraining.screens.json_server.functions.funtion_fragments.create_posts.CreatePostUserIdRangeFragment"
+        android:name="com.null31337.retrofittraining.screens.json_server.functions.function_fragments.create_posts.CreatePostUserIdRangeFragment"
         android:label="CreatePostUserIdRangeFragment" />
     <fragment
         android:id="@+id/createPostWithDoubleRange"
-        android:name="com.null31337.retrofittraining.screens.json_server.functions.funtion_fragments.create_posts.CreatePostWithDoubleRange"
+        android:name="com.null31337.retrofittraining.screens.json_server.functions.function_fragments.create_posts.CreatePostWithDoubleRange"
         android:label="CreatePostWithDoubleRange" />
     <fragment
         android:id="@+id/createPostWithRangeTextFragment"
-        android:name="com.null31337.retrofittraining.screens.json_server.functions.funtion_fragments.create_posts.CreatePostWithRangeTextFragment"
+        android:name="com.null31337.retrofittraining.screens.json_server.functions.function_fragments.create_posts.CreatePostWithRangeTextFragment"
         android:label="CreatePostWithRangeTextFragment" />
     <fragment
         android:id="@+id/createPostRandomFragment"
-        android:name="com.null31337.retrofittraining.screens.json_server.functions.funtion_fragments.create_posts.CreatePostRandomFragment"
+        android:name="com.null31337.retrofittraining.screens.json_server.functions.function_fragments.create_posts.CreatePostRandomFragment"
         android:label="CreatePostRandomFragment" />
     <fragment
         android:id="@+id/deletePostPickFragment"
-        android:name="com.null31337.retrofittraining.screens.json_server.functions.funtion_fragments.delete_posts.DeletePostPickFragment"
+        android:name="com.null31337.retrofittraining.screens.json_server.functions.function_fragments.delete_posts.DeletePostPickFragment"
         android:label="DeletePostPickFragment" />
     <fragment
         android:id="@+id/deleteByUsersIdFragment"
-        android:name="com.null31337.retrofittraining.screens.json_server.functions.funtion_fragments.delete_posts.DeleteByUsersIdFragment"
+        android:name="com.null31337.retrofittraining.screens.json_server.functions.function_fragments.delete_posts.DeleteByUsersIdFragment"
         android:label="DeleteByUsersIdFragment" />
 </navigation>

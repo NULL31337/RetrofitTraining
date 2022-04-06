@@ -4,7 +4,7 @@ import androidx.lifecycle.LiveData
 import com.null31337.retrofittraining.data.dao.NoteDao
 import com.null31337.retrofittraining.model.note.NoteModel
 
-class NoteRealization (private val noteDao: NoteDao) : NoteRepository {
+class NoteRealization(private val noteDao: NoteDao) : NoteRepository {
     override val data: LiveData<List<NoteModel>>
         get() = noteDao.getAllNotes()
 
@@ -14,7 +14,7 @@ class NoteRealization (private val noteDao: NoteDao) : NoteRepository {
     }
 
     override suspend fun delete(note: NoteModel, onSuccess: () -> Unit) {
-       noteDao.delete(note)
+        noteDao.delete(note)
         onSuccess()
     }
 }

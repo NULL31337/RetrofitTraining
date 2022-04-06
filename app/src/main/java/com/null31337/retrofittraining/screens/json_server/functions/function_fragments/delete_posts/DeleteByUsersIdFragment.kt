@@ -1,4 +1,4 @@
-package com.null31337.retrofittraining.screens.json_server.functions.funtion_fragments.delete_posts
+package com.null31337.retrofittraining.screens.json_server.functions.function_fragments.delete_posts
 
 import android.app.AlertDialog
 import android.content.DialogInterface
@@ -15,7 +15,7 @@ import com.null31337.retrofittraining.databinding.FragmentDeletePostsUseridBindi
 import com.null31337.retrofittraining.model.functions.Post
 import com.null31337.retrofittraining.screens.json_server.functions.FunctionsViewModel
 import com.null31337.retrofittraining.screens.json_server.functions.FunctionsViewModel.Companion.waiting
-import com.null31337.retrofittraining.screens.json_server.functions.funtion_fragments.ButtonInfo
+import com.null31337.retrofittraining.screens.json_server.functions.function_fragments.ButtonInfo
 
 class DeleteByUsersIdFragment : Fragment() {
     private lateinit var binding: FragmentDeletePostsUseridBinding
@@ -27,12 +27,12 @@ class DeleteByUsersIdFragment : Fragment() {
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         binding = FragmentDeletePostsUseridBinding.inflate(layoutInflater, container, false)
         viewModel = ViewModelProvider(this)[FunctionsViewModel::class.java]
         viewModel.getAllPosts()
         viewModel.data.observe(viewLifecycleOwner) { posts ->
-            posts.body()?.let {
+            posts.body()?.let { it ->
                 data = it
                 data.forEach { userIds.add(it.userId) }
             }
