@@ -1,7 +1,6 @@
 package com.null31337.retrofittraining.screens.json_server.functions.function_fragments.create_posts
 
 import android.os.Bundle
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -13,11 +12,16 @@ import com.null31337.retrofittraining.databinding.FragmentCreatePostsDoubleRange
 import com.null31337.retrofittraining.model.functions.Post
 import com.null31337.retrofittraining.screens.json_server.functions.FunctionsViewModel
 import com.null31337.retrofittraining.screens.json_server.functions.function_fragments.ButtonInfo
+import com.null31337.retrofittraining.screens.json_server.functions.function_fragments.ButtonInfoId
+import com.null31337.retrofittraining.screens.json_server.functions.function_fragments.RangeData
+import com.null31337.retrofittraining.screens.json_server.functions.function_fragments.RangeUserIdData
 
 
 class CreatePostWithDoubleRange : Fragment() {
     private lateinit var binding: FragmentCreatePostsDoubleRangeBinding
     private lateinit var viewModel: FunctionsViewModel
+    private lateinit var rangeData: RangeData
+    private lateinit var rangeUserIdData: RangeData
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -32,49 +36,11 @@ class CreatePostWithDoubleRange : Fragment() {
     }
 
     private fun init() {
+        rangeData = RangeData(binding = binding.range)
+        rangeUserIdData = RangeUserIdData(binding.rangeUserId)
         binding.createBtn.setOnClickListener {
-            if (binding.userIdLeft.text.isEmpty()) {
-                binding.userIdLeft.error = "UserId left is required"
-                return@setOnClickListener
-            }
-            if (binding.userIdRight.text.isEmpty()) {
-                binding.userIdRight.error = "UserId right is required"
-                return@setOnClickListener
-            }
-            if (binding.rangeLeft.text.isEmpty()) {
-                binding.rangeLeft.error = "Range left is required"
-                return@setOnClickListener
-            }
-            if (binding.rangeRight.text.isEmpty()) {
-                binding.rangeRight.error = "Range right is required"
-                return@setOnClickListener
-            }
-            val rangeUserId =
-                binding.userIdLeft.text.toString().toInt() to
-                        binding.userIdRight.text.toString().toInt() + 1
-            val rangeText =
-                binding.rangeLeft.text.toString().toInt() to
-                        binding.rangeRight.text.toString().toInt() + 1
-            if (rangeText.first > rangeText.second) {
-                binding.rangeLeft.error = "Left border must be not more than right border"
-                binding.rangeRight.error = "Left border must be not more than right border"
-                return@setOnClickListener
-            }
-            if (rangeText.second - rangeText.first > 20) {
-                binding.rangeLeft.error = "Pls create a smaller range"
-                binding.rangeRight.error = "Pls create a smaller range"
-                return@setOnClickListener
-            }
-            if (rangeUserId.first > rangeUserId.second) {
-                binding.rangeLeft.error = "Left border must be not more than right border"
-                binding.rangeRight.error = "Left border must be not more than right border"
-                return@setOnClickListener
-            }
-            if (rangeUserId.second - rangeUserId.first > 20) {
-                binding.userIdLeft.error = "Pls create a smaller range"
-                binding.userIdRight.error = "Pls create a smaller range"
-                return@setOnClickListener
-            }
+            val rangeText = rangeData.getData() ?: return@setOnClickListener
+            val rangeUserId = rangeUserIdData.getData() ?: return@setOnClickListener
             val rangeTextSize = rangeText.second - rangeText.first + 1
             val rangeUserIdSize = rangeUserId.second - rangeUserId.first + 1
             if (rangeTextSize > rangeUserIdSize) {
@@ -84,7 +50,6 @@ class CreatePostWithDoubleRange : Fragment() {
                 for (i in rangeText.first..rangeText.second) {
                     val title = binding.title.text.toString().split("#").joinToString(i.toString())
                     val body = binding.body.text.toString().split("#").joinToString(i.toString())
-                    Log.d("TAG", "init: $title \n $body")
                     viewModel.createPost(
                         Post(
                             userId,
@@ -107,7 +72,6 @@ class CreatePostWithDoubleRange : Fragment() {
                     val title =
                         binding.title.text.toString().split("#").joinToString(text.toString())
                     val body = binding.body.text.toString().split("#").joinToString(text.toString())
-                    Log.d("TAG", "init: $title \n $body")
                     viewModel.createPost(
                         Post(
                             i,
@@ -130,7 +94,7 @@ class CreatePostWithDoubleRange : Fragment() {
     }
 
     companion object {
-        val buttonInfo = ButtonInfo(
+        val buttonInfo = ButtonInfoId(
             "Create posts by interesting rule",
             R.id.action_functionsFragment_to_createPostWithDoubleRange
         )

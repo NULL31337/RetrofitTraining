@@ -12,6 +12,7 @@ import com.null31337.retrofittraining.databinding.FragmentDeletePostsByPickBindi
 import com.null31337.retrofittraining.screens.json_server.functions.FunctionsViewModel
 import com.null31337.retrofittraining.screens.json_server.functions.FunctionsViewModel.Companion.waiting
 import com.null31337.retrofittraining.screens.json_server.functions.function_fragments.ButtonInfo
+import com.null31337.retrofittraining.screens.json_server.functions.function_fragments.ButtonInfoId
 import com.null31337.retrofittraining.screens.json_server.functions.function_fragments.delete_posts.pick.CheckboxAdapter
 
 class DeletePostPickFragment : Fragment() {
@@ -50,7 +51,7 @@ class DeletePostPickFragment : Fragment() {
 
     companion object {
         val buttonInfo =
-            ButtonInfo(
+            ButtonInfoId(
                 "Delete posts by pick",
                 R.id.action_functionsFragment_to_deletePostPickFragment
             )

@@ -16,6 +16,7 @@ import com.null31337.retrofittraining.model.functions.Post
 import com.null31337.retrofittraining.screens.json_server.functions.FunctionsViewModel
 import com.null31337.retrofittraining.screens.json_server.functions.FunctionsViewModel.Companion.waiting
 import com.null31337.retrofittraining.screens.json_server.functions.function_fragments.ButtonInfo
+import com.null31337.retrofittraining.screens.json_server.functions.function_fragments.ButtonInfoId
 
 class DeleteByUsersIdFragment : Fragment() {
     private lateinit var binding: FragmentDeletePostsUseridBinding
@@ -100,6 +101,6 @@ class DeleteByUsersIdFragment : Fragment() {
 
     companion object {
         val buttonInfo =
-            ButtonInfo("Delete by UserId", R.id.action_functionsFragment_to_deleteByUsersIdFragment)
+            ButtonInfoId("Delete by UserId", R.id.action_functionsFragment_to_deleteByUsersIdFragment)
     }
 }

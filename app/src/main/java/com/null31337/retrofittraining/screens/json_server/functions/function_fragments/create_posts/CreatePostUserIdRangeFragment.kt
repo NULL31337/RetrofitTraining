@@ -12,10 +12,14 @@ import com.null31337.retrofittraining.databinding.FragmentCreatePostsUseridRange
 import com.null31337.retrofittraining.model.functions.Post
 import com.null31337.retrofittraining.screens.json_server.functions.FunctionsViewModel
 import com.null31337.retrofittraining.screens.json_server.functions.function_fragments.ButtonInfo
+import com.null31337.retrofittraining.screens.json_server.functions.function_fragments.ButtonInfoId
+import com.null31337.retrofittraining.screens.json_server.functions.function_fragments.RangeData
+import com.null31337.retrofittraining.screens.json_server.functions.function_fragments.RangeUserIdData
 
 class CreatePostUserIdRangeFragment : Fragment() {
     private lateinit var binding: FragmentCreatePostsUseridRangeBinding
     private lateinit var viewModel: FunctionsViewModel
+    private lateinit var rangeData: RangeData
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -30,28 +34,9 @@ class CreatePostUserIdRangeFragment : Fragment() {
     }
 
     private fun init() {
+        rangeData = RangeUserIdData(binding.range)
         binding.createBtn.setOnClickListener {
-            if (binding.userIdLeft.text.isEmpty()) {
-                binding.userIdLeft.error = "UserId left is required"
-                return@setOnClickListener
-            }
-            if (binding.userIdRight.text.isEmpty()) {
-                binding.userIdRight.error = "UserId right is required"
-                return@setOnClickListener
-            }
-            val range =
-                binding.userIdLeft.text.toString().toInt() to
-                        binding.userIdRight.text.toString().toInt() + 1
-            if (range.first > range.second) {
-                binding.userIdLeft.error = "Left border must be not more than right border"
-                binding.userIdRight.error = "Left border must be not more than right border"
-                return@setOnClickListener
-            }
-            if (range.second - range.first > 20) {
-                binding.userIdLeft.error = "Pls create a smaller range"
-                binding.userIdRight.error = "Pls create a smaller range"
-                return@setOnClickListener
-            }
+            val range = rangeData.getData() ?: return@setOnClickListener
             for (i in range.first..range.second) {
                 viewModel.createPost(
                     Post(
@@ -69,7 +54,7 @@ class CreatePostUserIdRangeFragment : Fragment() {
     }
 
     companion object {
-        val buttonInfo = ButtonInfo(
+        val buttonInfo = ButtonInfoId(
             "Create post in userId range",
             R.id.action_functionsFragment_to_createPostUserIdRangeFragment
         )

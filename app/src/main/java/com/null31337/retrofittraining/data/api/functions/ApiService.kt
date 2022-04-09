@@ -8,6 +8,15 @@ interface ApiService {
     @GET("posts")
     suspend fun getAllPosts(): Response<List<Post>>
 
+    @GET("posts")
+    suspend fun getByQueryMap(@QueryMap map: Map<String, String>): Response<List<Post>>
+
+    @PUT("posts/{id}")
+    suspend fun putPost(
+        @Path("id") id: Int,
+        @Body post: Post
+    ): Response<Post>
+
     @POST("posts")
     suspend fun postPost(
         @Body post: Post

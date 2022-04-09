@@ -5,16 +5,13 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
-import com.null31337.retrofittraining.APP
 import com.null31337.retrofittraining.R
-import com.null31337.retrofittraining.screens.json_server.functions.function_fragments.create_posts.CreatePostRandomFragment
-import com.null31337.retrofittraining.screens.json_server.functions.function_fragments.create_posts.CreatePostUserIdRangeFragment
-import com.null31337.retrofittraining.screens.json_server.functions.function_fragments.create_posts.CreatePostWithRangeTextFragment
-import com.null31337.retrofittraining.screens.json_server.functions.function_fragments.create_posts.CreatePostsFragment
+import com.null31337.retrofittraining.screens.json_server.functions.function_fragments.create_posts.*
 import com.null31337.retrofittraining.screens.json_server.functions.function_fragments.delete_posts.DeleteByUsersIdFragment
 import com.null31337.retrofittraining.screens.json_server.functions.function_fragments.delete_posts.DeletePostFragment
 import com.null31337.retrofittraining.screens.json_server.functions.function_fragments.delete_posts.DeletePostPickFragment
-import com.null31337.retrofittraining.screens.json_server.functions.function_fragments.show_posts.ShowAllPostsFragment
+import com.null31337.retrofittraining.screens.json_server.functions.function_fragments.edit_post.OpenPostFragment
+import com.null31337.retrofittraining.screens.json_server.functions.function_fragments.show_posts.*
 
 class FunctionsAdapter : RecyclerView.Adapter<FunctionsAdapter.FunctionsViewHolder>() {
     class FunctionsViewHolder(view: View) : RecyclerView.ViewHolder(view)
@@ -22,9 +19,16 @@ class FunctionsAdapter : RecyclerView.Adapter<FunctionsAdapter.FunctionsViewHold
     val data = listOf(
         DeletePostPickFragment.buttonInfo,
         DeleteByUsersIdFragment.buttonInfo,
-        ShowAllPostsFragment.buttonInfo,
         DeletePostFragment.buttonInfo,
+        ShowAllPostsFragment.buttonInfo,
+        ShowPostsInRangeFragment.buttonInfo,
+        ShowPostsInNumberRange.buttonInfo,
+        ShowPostsPager.buttonInfo,
+        ShowPostsByRegex.buttonInfo,
+        ShowPostsByFullSearch.buttonInfo,
+        OpenPostFragment.buttonInfo,
         CreatePostsFragment.buttonInfo,
+        CreatePostWithDoubleRange.buttonInfo,
         CreatePostUserIdRangeFragment.buttonInfo,
         CreatePostWithRangeTextFragment.buttonInfo,
         CreatePostRandomFragment.buttonInfo
@@ -39,7 +43,7 @@ class FunctionsAdapter : RecyclerView.Adapter<FunctionsAdapter.FunctionsViewHold
     override fun onBindViewHolder(holder: FunctionsViewHolder, position: Int) {
         holder.itemView.findViewById<TextView>(R.id.function_item).text = data[position].name
         holder.itemView.findViewById<TextView>(R.id.function_item).setOnClickListener {
-            APP.navController.navigate(data[position].navigation)
+            data[position].navigate()
         }
     }
 

@@ -31,53 +31,19 @@
             android:layout_marginHorizontal="8dp"
             android:layout_marginVertical="32dp"
             android:text="@string/explanation_create"
-            app:layout_constraintBottom_toTopOf="@id/range_left"
+            app:layout_constraintBottom_toTopOf="@id/range"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/userId" />
 
 
-        <EditText
-            android:id="@+id/range_left"
-            android:layout_width="0dp"
+        <include layout="@layout/range_view"
+            android:id="@+id/range"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginHorizontal="8dp"
-            android:layout_marginVertical="32dp"
-            android:hint="@string/range_from"
-            android:importantForAutofill="no"
-
-            android:inputType="number"
+            app:layout_constraintTop_toBottomOf="@id/text"
             app:layout_constraintBottom_toTopOf="@id/title"
-            app:layout_constraintEnd_toStartOf="@id/range_tire"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/text" />
-
-        <TextView
-            android:id="@+id/range_tire"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginHorizontal="8dp"
-            android:layout_marginVertical="32dp"
-            android:gravity="center"
-            android:text="@string/to"
-            app:layout_constraintBottom_toBottomOf="@+id/range_left"
-            app:layout_constraintEnd_toStartOf="@id/range_right"
-            app:layout_constraintStart_toEndOf="@id/range_left"
-            app:layout_constraintTop_toTopOf="@id/range_left" />
-
-        <EditText
-            android:id="@+id/range_right"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginHorizontal="8dp"
-            android:layout_marginVertical="32dp"
-            android:hint="@string/range_to"
-            android:importantForAutofill="no"
-            android:inputType="number"
-            app:layout_constraintBottom_toBottomOf="@id/range_left"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@id/range_tire"
-            app:layout_constraintTop_toTopOf="@id/range_left" />
+            />
 
         <EditText
             android:id="@+id/title"
@@ -91,7 +57,7 @@
             app:layout_constraintBottom_toTopOf="@+id/body"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/range_left" />
+            app:layout_constraintTop_toBottomOf="@+id/range" />
 
         <EditText
             android:id="@+id/body"

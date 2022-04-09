@@ -12,6 +12,8 @@ import com.null31337.retrofittraining.databinding.FragmentCreatePostsRandomBindi
 import com.null31337.retrofittraining.model.functions.Post
 import com.null31337.retrofittraining.screens.json_server.functions.FunctionsViewModel
 import com.null31337.retrofittraining.screens.json_server.functions.function_fragments.ButtonInfo
+import com.null31337.retrofittraining.screens.json_server.functions.function_fragments.ButtonInfoId
+import kotlin.math.abs
 import kotlin.random.Random
 import kotlin.random.nextUInt
 
@@ -46,7 +48,7 @@ class CreatePostRandomFragment : Fragment() {
             for (i in 1..count) {
                 viewModel.createPost(
                     Post(
-                        Random.nextUInt().toInt(),
+                        abs(Random.nextInt()),
                         0,
                         generateText(),
                         generateText()
@@ -63,7 +65,7 @@ class CreatePostRandomFragment : Fragment() {
 
     companion object {
         val buttonInfo =
-            ButtonInfo(
+            ButtonInfoId(
                 "Create random posts",
                 R.id.action_functionsFragment_to_createPostRandomFragment
             )

@@ -9,6 +9,7 @@ import android.view.ViewGroup
 import com.null31337.retrofittraining.APP
 import com.null31337.retrofittraining.R
 import com.null31337.retrofittraining.screens.json_server.functions.function_fragments.ButtonInfo
+import com.null31337.retrofittraining.screens.json_server.functions.function_fragments.ButtonInfoId
 import com.null31337.retrofittraining.screens.json_server.functions.function_fragments.show_posts.ShowAllPostsFragment
 
 class DeletePostFragment : ShowAllPostsFragment() {
@@ -16,7 +17,7 @@ class DeletePostFragment : ShowAllPostsFragment() {
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         val view = super.onCreateView(inflater, container, savedInstanceState)
         adapter.listener = { position: Int ->
             val listener = DialogInterface.OnClickListener { _, which ->
@@ -36,8 +37,8 @@ class DeletePostFragment : ShowAllPostsFragment() {
                     """
                         id: ${adapter.data[position].id}
                         userId: ${adapter.data[position].userId}
-                        title: ${buildDialogString(adapter.data[position].title)}
-                        body: ${buildDialogString(adapter.data[position].body)}
+                        title: ${buildDialogString(adapter.data[position].title ?: "")}
+                        body: ${buildDialogString(adapter.data[position].body ?: "")}
                     """.trimIndent()
                 )
                 .setPositiveButton("Delete", listener)
@@ -53,7 +54,7 @@ class DeletePostFragment : ShowAllPostsFragment() {
         string.take(32).replace(regex, " ") + if (string.length > 32) "..." else ""
 
     companion object {
-        val buttonInfo = ButtonInfo(
+        val buttonInfo = ButtonInfoId(
             "Delete from list",
             R.id.action_functionsFragment_to_deletePostFragment
         )

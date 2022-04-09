@@ -38,9 +38,6 @@
         android:name="com.null31337.retrofittraining.screens.json_server.functions.FunctionsFragment"
         android:label="FunctionsFragment">
         <action
-            android:id="@+id/action_functionsFragment_to_showPostsFragment"
-            app:destination="@id/showPostsFragment" />
-        <action
             android:id="@+id/action_functionsFragment_to_showAllPostsFragment"
             app:destination="@id/showAllPostsFragment" />
         <action
@@ -67,11 +64,35 @@
         <action
             android:id="@+id/action_functionsFragment_to_deleteByUsersIdFragment"
             app:destination="@id/deleteByUsersIdFragment" />
+        <action
+            android:id="@+id/action_functionsFragment_to_openPostFragment"
+            app:destination="@id/openPostFragment" />
+        <action
+            android:id="@+id/action_functionsFragment_to_showPostsInRangeFragment"
+            app:destination="@id/showPostsInRangeFragment" />
+        <action
+            android:id="@+id/action_functionsFragment_to_showPostsInNumberRange"
+            app:destination="@id/showPostsInNumberRange" />
+        <action
+            android:id="@+id/action_functionsFragment_to_showPostsPager"
+            app:destination="@id/showPostsPager" />
+        <action
+            android:id="@+id/action_functionsFragment_to_showPostsByRegex"
+            app:destination="@id/showPostsByRegex" />
+        <action
+            android:id="@+id/action_functionsFragment_to_showPostsByFullSearch"
+            app:destination="@id/showPostsByFullSearch" />
     </fragment>
     <fragment
         android:id="@+id/showPostsFragment"
         android:name="com.null31337.retrofittraining.screens.json_server.functions.function_fragments.show_posts.ShowPostsFragment"
-        android:label="ShowPostsFragment" />
+        android:label="ShowPostsFragment" >
+        <argument
+            android:name="posts"
+            app:argType="com.null31337.retrofittraining.model.functions.Post[]"
+            app:nullable="true"
+            android:defaultValue="@null" />
+    </fragment>
     <fragment
         android:id="@+id/showAllPostsFragment"
         android:name="com.null31337.retrofittraining.screens.json_server.functions.function_fragments.show_posts.ShowAllPostsFragment"
@@ -108,4 +129,56 @@
         android:id="@+id/deleteByUsersIdFragment"
         android:name="com.null31337.retrofittraining.screens.json_server.functions.function_fragments.delete_posts.DeleteByUsersIdFragment"
         android:label="DeleteByUsersIdFragment" />
+    <fragment
+        android:id="@+id/editFragment"
+        android:name="com.null31337.retrofittraining.screens.json_server.functions.function_fragments.edit_post.EditFragment"
+        android:label="EditFragment" >
+        <argument
+            android:name="post"
+            app:argType="com.null31337.retrofittraining.model.functions.Post" />
+    </fragment>
+    <fragment
+        android:id="@+id/openPostFragment"
+        android:name="com.null31337.retrofittraining.screens.json_server.functions.function_fragments.edit_post.OpenPostFragment"
+        android:label="OpenPostFragment" >
+        <action
+            android:id="@+id/action_openPostFragment_to_editFragment"
+            app:destination="@id/editFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/showPostsInRangeFragment"
+        android:name="com.null31337.retrofittraining.screens.json_server.functions.function_fragments.show_posts.ShowPostsInRangeFragment"
+        android:label="ShowPostsInRangeFragment" >
+        <action
+            android:id="@+id/action_showPostsInRangeFragment_to_showPostsFragment"
+            app:destination="@id/showPostsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/showPostsInNumberRange"
+        android:name="com.null31337.retrofittraining.screens.json_server.functions.function_fragments.show_posts.ShowPostsInNumberRange"
+        android:label="ShowPostsInNumberRange" >
+        <action
+            android:id="@+id/action_showPostsInNumberRange_to_showPostsFragment"
+            app:destination="@id/showPostsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/showPostsPager"
+        android:name="com.null31337.retrofittraining.screens.json_server.functions.function_fragments.show_posts.ShowPostsPager"
+        android:label="ShowPostsPager" />
+    <fragment
+        android:id="@+id/showPostsByFullSearch"
+        android:name="com.null31337.retrofittraining.screens.json_server.functions.function_fragments.show_posts.ShowPostsByFullSearch"
+        android:label="ShowPostsByFullSearch" >
+        <action
+            android:id="@+id/action_showPostsByFullSearch_to_showPostsFragment"
+            app:destination="@id/showPostsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/showPostsByRegex"
+        android:name="com.null31337.retrofittraining.screens.json_server.functions.function_fragments.show_posts.ShowPostsByRegex"
+        android:label="ShowPostsByRegex" >
+        <action
+            android:id="@+id/action_showPostsByRegex_to_showPostsFragment"
+            app:destination="@id/showPostsFragment" />
+    </fragment>
 </navigation>
