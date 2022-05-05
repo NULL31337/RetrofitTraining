@@ -15,7 +15,7 @@ import kotlinx.coroutines.launch
 import kotlinx.coroutines.runBlocking
 import retrofit2.Response
 
-
+//TODO Переписать на ConcurrentQueue (узнал недавно на лекции)
 class FunctionsViewModel : ViewModel() {
     private var rep = FunctionsRepository()
     var data: MutableLiveData<Response<List<Post>>> = MutableLiveData()
